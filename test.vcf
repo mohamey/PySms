@@ -6,3 +6,9 @@ EMAIL;TYPE=INTERNET:mohamey@tcd.ie
 TEL;TYPE=HOME:087 647 7540
 NOTE:Number\: 087 647 7540\n\n\nEmail\: mohamey@tcd.ie\n
 END:VCARD
+BEGIN:VCARD
+VERSION:3.0
+FN:Conor Maguire
+N:Maguire;Conor;;;
+TEL;TYPE=HOME:086 212 5165
+END:VCARD
