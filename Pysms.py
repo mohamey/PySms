@@ -56,7 +56,7 @@ def generateLogin(frame):
 			fileObject = open("userData.txt", 'r')
 			loginDetails = cPickle.load(fileObject)
 			if loginDetails:
-				return loginDetails, keyring.get_password("Pysms", loginDetails)]
+				return [loginDetails, keyring.get_password("Pysms", loginDetails)]
 			return loginDetails
 		except:
 			log.write("No Login Details found on System")
