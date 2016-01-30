@@ -1,6 +1,7 @@
 import vobject
 from Tkinter import *
 import keyring
+from keyring import *
 import cPickle
 import tkMessageBox
 import cookielib
@@ -35,7 +36,7 @@ def generateLogin(frame):
 	def saveLogin(login):
 		try:
 			fileObject = open("userData.txt", 'wb')
-			keyring.set_password("system", login[0], login[1])
+			keyring.set_password("Pysms", login[0], login[1])
 			cPickle.dump(login[0], fileObject, protocol=cPickle.HIGHEST_PROTOCOL)
 			fileObject.close()
 		except:
@@ -44,7 +45,7 @@ def generateLogin(frame):
 	#####Remove Login Details#####
 	def purgeLogin(number):
 		try:
-			keyring.delete_password("system", number)
+			keyring.delete_password("Pysms", number)
 			os.remove("userData.txt")
 		except:
 			log.write("Erro, unable to purge login data")
@@ -55,7 +56,7 @@ def generateLogin(frame):
 			fileObject = open("userData.txt", 'r')
 			loginDetails = cPickle.load(fileObject)
 			if loginDetails:
-				return [loginDetails, keyring.get_password("system", loginDetails)]
+				return [loginDetails, keyring.get_password("Pysms", loginDetails)]
 			return loginDetails
 		except:
 			log.write("No Login Details found on System")
