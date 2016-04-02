@@ -136,7 +136,10 @@ def sendMessage(frame):
 
 		vcards = vobject.readComponents(content)
 		for contact in vcards:
-			numbers.append(contact.tel.value)
+			try:
+				numbers.append(contact.tel.value)
+			except:
+				pass
 
 	frame.wm_title("Send Message")
 
