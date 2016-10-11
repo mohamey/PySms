@@ -1,2 +1,18 @@
 # PySms
-A simple open source solution to sending mass Texts through your desktop. To get started, simply download the project and run Pysms.py using a python interpreter. This is a cross platform solution that should work on Windows, OSX and Linux Distributions. Official builds of the application will be released soon on http://mohamey.me, after support for more networks has been added. 
+A simple open source solution I wrote to send mass webtexts using Three Ireland's webtext service. Written in Python3, it has a GUI using tkinter.
+
+## Requirements
+* Python3
+* Pip3
+* python3-tk (linux)
+
+## Usage
+First install the requirements:
+```
+pip3 install -r requirements.txt
+```
+
+Then run the application:
+```
+python3 Pysms.py
+```
