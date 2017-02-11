@@ -106,7 +106,7 @@ def sendMessage(frame):
 		msgToSend = msg.strip()
 		messageSize = (len(msgToSend)/160)+1
 		totalMessages = len(numbers) * messageSize
-		if(int(remainingTexts) > totalMessages):
+		if True:#(int(remainingTexts) > totalMessages):
 			numbers.append(recipient)
 			if three.send(msgToSend, numbers):
 				messagebox.showinfo("Success", "Message was successfully sent")
